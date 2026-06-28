@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import About from "../components/About.js";
 import Projects from "../components/Projects.js";
+import Research from "../components/Research.js";
 import Sponsors from "../components/Sponsors.js";
 import Team from "../components/Team.js";
 import Visuals from "../components/Visuals.js";
-import Join from "../components/Join.js";
 import Contact from "../components/Contact.js";
 import UgvRobot from "../components/UgvRobot.js";
 
@@ -149,9 +149,9 @@ function Home() {
 
             <button
               className="landing-btn secondary"
-              onClick={() => scrollToSection("join")}
+              onClick={() => scrollToSection("contact")}
             >
-              Join the Team
+              Contact Us
             </button>
           </div>
         </div>
@@ -172,10 +172,10 @@ function Home() {
 
       <About />
       <Projects />
+      <Research />
       <Sponsors />
       <Team />
       <Visuals />
-      <Join />
       <Contact />
     </>
   );

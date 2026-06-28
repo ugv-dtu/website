@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./ISDC.css";
 
 import sporsImg from "../assets/isdc_page/spros-logo.png";
-import valkyrieImg from "../assets/projects/valkyrie_1.png";
+import valkyrieImg from "../assets/projects/valkyrie_2.jpg";
 
 function ISDC() {
   const ref = useRef(null);

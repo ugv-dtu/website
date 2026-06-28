@@ -10,6 +10,11 @@ import img5 from "../assets/visuals/5.jpg";
 import img6 from "../assets/visuals/6.jpeg";
 import img7 from "../assets/visuals/7.jpeg";
 import img8 from "../assets/visuals/8.jpg";
+import img9 from "../assets/visuals/9.jpeg";
+import img10 from "../assets/visuals/10.jpeg";
+import img11 from "../assets/visuals/11.jpeg";
+import img12 from "../assets/visuals/12.jpeg";
+import avniImg from "../assets/projects/avni_1.jpeg";
 
 const IMAGES = [
   img1,
@@ -20,6 +25,11 @@ const IMAGES = [
   img6,
   img7,
   img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  avniImg,
 ];
 
 const LOOP = [...IMAGES, ...IMAGES];

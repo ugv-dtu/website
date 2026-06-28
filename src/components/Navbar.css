@@ -9,7 +9,7 @@
   --glass-bg: rgba(255, 255, 255, 0.06);
 
   --pill-width: 96px;
-  --pill-gap: 8px;
+  --pill-gap: 6px;
 }
 
 .navbar {
@@ -23,7 +23,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
 
-  padding: 0 30px;
+  padding: 0 20px;
   z-index: 1000;
   overflow: hidden;
 
@@ -55,13 +55,13 @@
   letter-spacing: 1px;
   color: var(--text-main);
   cursor: pointer;
-  font-size: 26px;
+  font-size: 22px;
 }
 .nav-logo span {
   color: var(--accent);
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1360px) {
   .nav-logo {
     font-size: 20px;
   }

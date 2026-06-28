@@ -6,6 +6,10 @@ import "./Sponsors.css";
 import solidworksImg from "../assets/sponsors/solidworks.png";
 import mathworksImg from "../assets/sponsors/mathworks.png";
 import ansysImg from "../assets/sponsors/ansys.png";
+import earthdayImg from "../assets/sponsors/earthday.png";
+import jswImg from "../assets/sponsors/jsw.png";
+import pcbwayImg from "../assets/sponsors/pcbway.png";
+import robokitsImg from "../assets/sponsors/robokits.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +17,10 @@ const SPONSORS = [
   { name: "SolidWorks", logo: solidworksImg },
   { name: "Mathworks", logo: mathworksImg },
   { name: "Ansys", logo: ansysImg },
+  { name: "Earthday", logo: earthdayImg },
+  { name: "JSW", logo: jswImg },
+  { name: "PCBWay", logo: pcbwayImg },
+  { name: "Robokits", logo: robokitsImg },
 ];
 
 SPONSORS.forEach((s) => {
@@ -75,13 +83,13 @@ function Sponsors() {
 
       gsap.fromTo(
         ".sponsor-logo",
-        { opacity: 0, y: 36 },
+        { opacity: 0, y: 40 },
         {
           opacity: 1,
           y: 0,
-          stagger: 0.14,
-          duration: 0.6,
-          ease: "power2.out",
+          stagger: 0.1,
+          duration: 0.7,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: ".sponsors-logos",
             start: "top 85%",

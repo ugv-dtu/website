@@ -31,7 +31,7 @@ function Blogs() {
               </h2>
 
               <p className="blog-card-excerpt">
-                {blog.description}
+                {blog.excerpt}
               </p>
 
               <div className="blog-card-meta">

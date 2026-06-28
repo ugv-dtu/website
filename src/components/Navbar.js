@@ -4,18 +4,20 @@ import "./Navbar.css";
 
 const MENU_ALL = [
   { label: "Home", id: "home", path: "/" },
+  { label: "UGVC", path: "/ugvc" },
   { label: "ISDC", path: "/isdc" },
+  { label: "IGVC", path: "/igvc" },
   { label: "Blogs", path: "/blogs" },
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
+  { label: "Research", id: "research" },
   { label: "Sponsors", id: "sponsors" },
   { label: "Team", id: "team" },
   { label: "Visuals", id: "visuals" },
-  { label: "Join", id: "join" },
   { label: "Contact", id: "contact" },
 ];
 
-const MENU_PRIMARY = MENU_ALL.slice(0, 3);
+const MENU_PRIMARY = MENU_ALL.slice(0, 5);
 
 let raf = null;
 
@@ -73,7 +75,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const m = window.matchMedia("(max-width: 767px)");
-    const t = window.matchMedia("(max-width: 1260px)");
+    const t = window.matchMedia("(max-width: 1360px)");
     const u = () =>
       setMode(m.matches ? "mobile" : t.matches ? "tablet" : "desktop");
     u();
@@ -86,6 +88,21 @@ export default function Navbar() {
   }, []);
 
   const currentMenu = mode === "desktop" ? MENU_ALL : MENU_PRIMARY;
+
+  const getDisplayActiveIndex = () => {
+    const activeItem = MENU_ALL[activeIndex];
+    if (!activeItem) return 0;
+
+    const idx = currentMenu.findIndex((item) => item.label === activeItem.label);
+    if (idx !== -1) return idx;
+
+    if (activeItem.id) {
+      const homeIdx = currentMenu.findIndex((item) => item.id === "home" || item.path === "/");
+      if (homeIdx !== -1) return homeIdx;
+    }
+
+    return 0;
+  };
 
   useEffect(() => {
     if (isHome) return;
@@ -187,7 +204,7 @@ export default function Navbar() {
           <span
             className="pill-indicator"
             style={{
-              transform: `translateX(${activeIndex * 104}px)`,
+              transform: `translateX(${getDisplayActiveIndex() * 102}px)`,
               transition:
                 "transform 0.6s cubic-bezier(.22,1,.36,1)",
             }}

@@ -29,9 +29,9 @@
   max-width: 1280px;
   margin: 0 auto;
   padding:
-    calc(64px + clamp(48px, 8vw, 80px))
+    calc(48px + clamp(32px, 6vw, 60px))
     clamp(20px, 5vw, 48px)
-    clamp(120px, 16vw, 160px);
+    clamp(80px, 12vw, 120px);
 }
 
 .projects-heading {
@@ -134,4 +134,16 @@
   .title-text {
     margin: 0 auto;
   }
+}
+
+/* CAD grid pattern inside project image container */
+.cad-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  z-index: 1;
+  pointer-events: none;
 }

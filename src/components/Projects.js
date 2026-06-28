@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
+import CadViewer from "./CadViewer.js";
 
 import agniImg from "../assets/projects/agni.jpg";
 import ashwini_1_Img from "../assets/projects/ashwini_1.jpeg";
@@ -9,10 +10,17 @@ import centaur_1_Img from "../assets/projects/centaur_1.png";
 import kurmImg from "../assets/projects/KURM.JPEG";
 import valkyrieImg from "../assets/projects/valkyrie_2.jpg";
 import airawatImg from "../assets/projects/airawat.jpg";
+import avniImg from "../assets/projects/avni_1.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
+  {
+    title: "AVNI",
+    desc: "Our latest flagship UGV rover engineered specifically for the Unmanned Ground Vehicle Challenge (UGVC). Avni features custom suspension kinematics, a decentralized ROS 2-based autonomy architecture, and a state-of-the-art sensory and computing payload.",
+    image: avniImg,
+    focus: "center center"
+  },
   {
     title: "ASHWINI",
     desc: "A fully autonomous unmanned ground vehicle capable of navigation, obstacle avoidance, and real-world terrain traversal using sensor fusion.",
@@ -23,6 +31,11 @@ const PROJECTS = [
     title: "Valkyrie",
     desc: "Valkyrie is an indigenously developed UAV focused on real-time perception, environmental sensing, and data-driven aerial operations, built for advanced robotics competitions and research applications.",
     image: valkyrieImg,
+  },
+  {
+    title: "AGNI",
+    desc: "AGNI became the foundation of our modern autonomy stack — a blend of intelligence, control, and design that paved the way for Ashwini.",
+    image: agniImg,
   },
   {
     title: "CENTAUR",
@@ -39,11 +52,6 @@ const PROJECTS = [
     title: "KURM",
     desc: "KURM carried forward the legacy, refining path planning, perception, and RTK-GPS precision to conquer complex terrains with confidence.",
     image: kurmImg,
-  },
-  {
-    title: "AGNI",
-    desc: "AGNI became the foundation of our modern autonomy stack — a blend of intelligence, control, and design that paved the way for Ashwini.",
-    image: agniImg,
   },
 ];
 
@@ -134,13 +142,20 @@ function Projects() {
             </div>
 
             <div className="project-image">
-              <img
-                src={p.image}
-                alt={p.title}
-                style={{ objectPosition: p.focus || "center"}}
-                loading="lazy"
-                decoding="async"
-              />
+              {p.modelUrl ? (
+                <div style={{ width: "100%", height: "100%", position: "relative", background: "#090909" }}>
+                  <div className="cad-grid-pattern" />
+                  <CadViewer modelUrl={p.modelUrl} />
+                </div>
+              ) : (
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  style={{ objectPosition: p.focus || "center"}}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
             </div>
           </div>
         ))}
