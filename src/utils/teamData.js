@@ -77,7 +77,7 @@ export const DEPARTMENTS = {
       name: "Ankit Kumar Roy",
       role: "Member",
       image: ankitImg,
-      instagram: "https://www.instagram.com/ankit.roy_0",
+      instagram: "https://www.instagram.com/ankitttroy",
       linkedin: "https://www.linkedin.com/in/ankit-roy1",
     },
 
