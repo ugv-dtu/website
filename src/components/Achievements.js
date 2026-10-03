@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Achievements.css";
 
 const ACHIEVEMENTS = [
+  { competition: "UGVC, ICMTC'26", position: "10th Global Rank" },
   { competition: "ISDC'26, (SPROS)", position: "Top 10 Global Rank" },
   { competition: "RoboSoc, Invictus’26", position: "3rd Runner Up" },
   { competition: "Autonav Challenge, IGVC'25", position: "Top 15 Global Rank" },

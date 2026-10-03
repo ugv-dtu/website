@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./Team.css";
 import {COUNCIL, DEPARTMENTS } from "../utils/teamData.js"
 
@@ -70,12 +70,21 @@ function Team() {
           <p>{m.role}</p>
 
           <div className="team-socials">
-            <a href={m.instagram} target="_blank" rel="noreferrer">
-              <FaInstagram />
-            </a>
-            <a href={m.linkedin} target="_blank" rel="noreferrer">
-              <FaLinkedinIn />
-            </a>
+            {m.github && m.github !== "#" && (
+              <a href={m.github} target="_blank" rel="noreferrer" aria-label={`${m.name} GitHub`}>
+                <FaGithub />
+              </a>
+            )}
+            {m.linkedin && m.linkedin !== "#" && (
+              <a href={m.linkedin} target="_blank" rel="noreferrer" aria-label={`${m.name} LinkedIn`}>
+                <FaLinkedinIn />
+              </a>
+            )}
+            {m.instagram && m.instagram !== "#" && (
+              <a href={m.instagram} target="_blank" rel="noreferrer" aria-label={`${m.name} Instagram`}>
+                <FaInstagram />
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -91,7 +100,7 @@ function Team() {
             <div className="team-grid">{renderCards(COUNCIL)}</div>
         </div>
 
-        {Object.entries(DEPARTMENTS).map(([dept, members]) => (
+        {Object.entries(DEPARTMENTS).filter(([, members]) => members.length > 0).map(([dept, members]) => (
           <div key={dept} className="team-department">
             <h3 className="team-section-title">{dept} Team</h3>
             <div className="team-grid">{renderCards(members)}</div>

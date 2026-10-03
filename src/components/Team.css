@@ -125,6 +125,7 @@
   display: flex;
   justify-content: center;
   gap: 14px;
+  min-height: 34px;
 }
 
 .team-socials a {
