@@ -135,7 +135,7 @@ function Footer() {
       </div>
 
       <div className="footer-credit">
-        UGV dev · Ankit Kumar Roy
+        UGV dev · Ankit Roy
       </div>
     </footer>
   );
