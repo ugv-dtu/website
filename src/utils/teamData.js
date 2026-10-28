@@ -194,14 +194,6 @@ export const DEPARTMENTS = {
       linkedin: "#",
     },
     {
-      name: "Ansh Dahiya",
-      role: "Member",
-      image: anshDahiyaImg,
-      github: "https://github.com/anshdahiya07",
-      instagram: "https://www.instagram.com/anshdahiya_07",
-      linkedin: "https://www.linkedin.com/in/ansh-dahiya-5a5461434",
-    },
-    {
       name: "Akash Sheejith",
       role: "Member",
       image: akashSheejithImg,
@@ -278,14 +270,6 @@ export const DEPARTMENTS = {
       image: harshitImg,
       github: "https://github.com/harshitmp4/",
       instagram: "https://www.instagram.com/harshitpostinggg/",
-    },
-    {
-      name: "Laxman Bhusal",
-      role: "Member",
-      image: laxmanBhusalImg,
-      github: "https://github.com/rypto-lab",
-      linkedin: "https://www.linkedin.com/in/laxman-bhusal-a5757a436/",
-      instagram: "https://www.instagram.com/its.laxmanx/",
     },
     {
       name: "Avinash Khalkho",
@@ -420,13 +404,6 @@ export const DEPARTMENTS = {
       image: mohdShahnawazImg,
       instagram: "https://www.instagram.com/hye.shan_",
       linkedin: "https://www.linkedin.com/in/mohd-shahnawaz-4b0a4442b",
-    },
-    {
-      name: "Ria Solanki",
-      role: "Member",
-      image: riaSolankiImg,
-      instagram: "https://www.instagram.com/legendforriyal",
-      linkedin: "#",
     },
     {
       name: "Manish Kumar",
