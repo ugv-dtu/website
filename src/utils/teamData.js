@@ -114,6 +114,14 @@ export const COUNCIL = [
     instagram: "https://www.instagram.com/harshittyagi333/",
     linkedin: "https://www.linkedin.com/in/harshit-tyagi-1aa705323/",
   },
+
+  {
+    name: "Ananya Tripathi",
+    role: "R&D Co-Head",
+    image: ananyaImg,
+    instagram: "https://www.instagram.com/anan.yaaa__/",
+    linkedin: "https://www.linkedin.com/in/ananya-tripathi-733407330",
+  },
   {
     name: "Ankit Kumar Roy",
     role: "Software Head",
@@ -157,13 +165,6 @@ export const COUNCIL = [
     image: ayushImg,
     instagram: "https://www.instagram.com/_.ayush2134",
     linkedin: "https://www.linkedin.com/in/ayush-kumar-403741381",
-  },
-  {
-    name: "Ananya Tripathi",
-    role: "R&D Co-Head",
-    image: ananyaImg,
-    instagram: "https://www.instagram.com/anan.yaaa__/",
-    linkedin: "https://www.linkedin.com/in/ananya-tripathi-733407330",
   },
 ];
 
