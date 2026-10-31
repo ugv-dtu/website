@@ -160,6 +160,14 @@ export const COUNCIL = [
     linkedin: "https://www.linkedin.com/in/rishikant-4b5334369",
   },
   {
+      name: "Avinash Khalkho",
+      role: "Software Co-Head",
+      image: avinashKhalkhoImg,
+      github: "https://github.com/w1dow",
+      linkedin: "https://www.linkedin.com/in/avinash-khalkho-19069527a/",
+      instagram: "https://www.instagram.com/_avinash__1306/",
+  },
+  {
     name: "Ayush Kumar",
     role: "Electrical Co-Head",
     image: ayushImg,
@@ -272,14 +280,7 @@ export const DEPARTMENTS = {
       github: "https://github.com/harshitmp4/",
       instagram: "https://www.instagram.com/harshitpostinggg/",
     },
-    {
-      name: "Avinash Khalkho",
-      role: "Member",
-      image: avinashKhalkhoImg,
-      github: "https://github.com/w1dow",
-      linkedin: "https://www.linkedin.com/in/avinash-khalkho-19069527a/",
-      instagram: "https://www.instagram.com/_avinash__1306/",
-    },
+    
   ]),
   Electrical: sortMembers([
     {
